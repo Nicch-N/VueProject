@@ -15,28 +15,21 @@
     .navItem{
         margin-right: 50px;
         width: 50px;
-        display: flex;
+        padding: 5px 0;
+        display: inline;
         text-align: center;
-        background: black;
-    }
-    .navLink{
-        text-align: center;
+        color: black;
+        font-style: normal;
+        text-decoration: none;
     }
     .navItem :hover{
-        font-style: italic;
-        background: blue;
+        background: rgb(189, 189, 189);
     }
 </style>
 <template>
     <div class="navBar">
-        <div class="navItem">
-            <a class="navLink">A</a>
-        </div>
-        <div class="navItem">
-            <a class="navLink">B</a>
-        </div>
-        <div class="navItem">
-            <a class="navLink">C</a>
-        </div>
+        <a class="navItem" href="">A</a>
+        <a class="navItem" href="">B</a>
+        <a class="navItem" href="">C</a>
     </div>
 </template>
