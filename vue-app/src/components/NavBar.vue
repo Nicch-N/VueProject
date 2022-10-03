@@ -1,5 +1,20 @@
 <script>
-
+    export default{
+        name:'NavBar',
+        props:{
+            routeLinks: { type: Array, required: true },
+            test:{type:String}
+        },
+        data(){
+          return {
+          }  
+        },
+        created() {
+            // props are exposed on `this`
+            console.log(this.routeLinks)
+            console.log(this.test)
+        }
+    }
 </script>
 <style>
     .navBar{
