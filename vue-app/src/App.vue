@@ -2,10 +2,12 @@
 import HelloThere from './components/HelloThere.vue'
 import HelloWorld from './components/HelloWorld.vue'
 import NavBar from './components/NavBar.vue'
+import CssTest from './components/CssTest.vue'
 
 const routes = {
   '/':HelloWorld,
-  'asd':HelloThere  
+  'asd':HelloThere,
+  'css':CssTest  
 }
 
 export default {
@@ -50,9 +52,12 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+.content{
+  margin-top: 1vw;
+}
 </style>
 
 <template>
   <NavBar :route-links='getRoutes' test="adada"/>
-  <component :is="currentView" />
+  <component :is="currentView" class="content"/>
 </template>

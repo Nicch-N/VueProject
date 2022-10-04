@@ -19,10 +19,11 @@
 </script>
 <style>
     .navBar{
+        width: 100vw;        
         border-bottom: 1px solid rgba(163, 163, 163, 0.178);
         display: flex;
         padding: 10px 5px 10px 30px;
-        background: linear-gradient(rgb(255, 255, 255), rgb(241, 241, 241));;
+        background: linear-gradient(rgb(255, 255, 255), rgb(199, 199, 199));;
     }
     *{
         margin: 0px;
@@ -38,8 +39,9 @@
         font-style: normal;
         text-decoration: none;
     }
-    .navItem :hover{
-        background: rgb(189, 189, 189);
+    .navItem:hover{
+        background-color: rgb(180, 180, 180);
+        border-radius: 15%;        
     }
 </style>
 <template>
@@ -47,6 +49,6 @@
         <!-- {{Object.values(routes)}} -->
         <a class="navItem" :href="routes.HelloWorld">A</a>
         <a class="navItem" :href="routes.HelloThere">B</a>
-        <a class="navItem" href="">C</a>
+        <a class="navItem" :href="routes.CssTest">C</a>
     </div>
 </template>
