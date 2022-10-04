@@ -1,10 +1,11 @@
 <script>
+import HelloThere from './components/HelloThere.vue'
 import HelloWorld from './components/HelloWorld.vue'
 import NavBar from './components/NavBar.vue'
 
 const routes = {
   '/':HelloWorld,
-  'asd':HelloWorld  
+  'asd':HelloThere  
 }
 
 export default {
@@ -20,15 +21,16 @@ export default {
   },
   computed: {
     currentView() {
-      return routes[this.currentPath.slice(1) || '/'] || HelloWorld
+      return routes[this.currentPath.slice(1) || '/'] || HelloWorld 
+      //last page is for if route not found
+      //currently set to helloWorld
     },
     getRoutes(){
-      let output = [Object.values(routes),Object.keys(routes)]
+      let output = []
       output = Object
       .entries(routes)
-      .map(([key, value]) => [value, key]);
-
-      Object.fromEntries(output);
+      .map(([key, value]) => [value.name, '#'+key]);
+      output = Object.fromEntries(output)
       return output;
     }
   },
@@ -52,6 +54,5 @@ export default {
 
 <template>
   <NavBar :route-links='getRoutes' test="adada"/>
-  <img alt="Vue logo" src="./assets/logo.png">
   <component :is="currentView" />
 </template>

@@ -2,17 +2,18 @@
     export default{
         name:'NavBar',
         props:{
-            routeLinks: { type: Array, required: true },
+            routeLinks: { type: Object, required: true },
             test:{type:String}
         },
         data(){
           return {
+            routes:this.routeLinks
           }  
         },
         created() {
             // props are exposed on `this`
-            console.log(this.routeLinks)
-            console.log(this.test)
+            // console.log(this.routeLinks)
+            // console.log(this.test)
         }
     }
 </script>
@@ -43,8 +44,9 @@
 </style>
 <template>
     <div class="navBar">
-        <a class="navItem" href="">A</a>
-        <a class="navItem" href="">B</a>
+        <!-- {{Object.values(routes)}} -->
+        <a class="navItem" :href="routes.HelloWorld">A</a>
+        <a class="navItem" :href="routes.HelloThere">B</a>
         <a class="navItem" href="">C</a>
     </div>
 </template>
