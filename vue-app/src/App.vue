@@ -7,7 +7,7 @@ import CssTest from './components/CssTest.vue'
 const routes = {
   '/':HelloWorld,
   'asd':HelloThere,
-  'css':CssTest  
+  'css':CssTest
 }
 
 export default {
@@ -53,7 +53,7 @@ export default {
   color: #2c3e50;
 }
 .content{
-  margin-top: 1vw;
+  padding-top: 1vw;
 }
 </style>
 

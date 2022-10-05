@@ -8,7 +8,6 @@
     .mid{
         display: flex;
         flex:1 1 auto;
-        size: 100%;
         color: black;
         background-color: black;
     }
@@ -20,6 +19,7 @@
         margin-right: 50%;
         margin-top: 50%;
         border-radius: 40%;
+        transition: .25s;
     }
     .button:hover{
         background-color: blue;

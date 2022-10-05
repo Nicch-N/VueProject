@@ -30,25 +30,30 @@
         margin-top: 0px;
     }
     .navItem{
-        margin-right: 50px;
-        width: 50px;
-        padding: 5px 0;
+        margin-right: 30px;
+        padding: 5px 20px;
         display: inline;
         text-align: center;
         color: black;
         font-style: normal;
         text-decoration: none;
+        transition: .3s;
+        border-radius: 30%
     }
     .navItem:hover{
         background-color: rgb(180, 180, 180);
-        border-radius: 15%;        
+        border-radius: 20%;  
     }
 </style>
 <template>
     <div class="navBar">
-        <!-- {{Object.values(routes)}} -->
-        <a class="navItem" :href="routes.HelloWorld">A</a>
-        <a class="navItem" :href="routes.HelloThere">B</a>
-        <a class="navItem" :href="routes.CssTest">C</a>
+        <!-- {{Object.values(routes)}}
+        <a class="navItem" :href="routes.HelloWorld">HelloWorld</a>
+        <a class="navItem" :href="routes.HelloThere">HelloThere</a>
+        <a class="navItem" :href="routes.CssTest">CssTest</a> -->
+        <div v-for="(value, key) in routes" :key="key">
+            <a class="navItem" :href="value">{{key}}</a>
+        </div>
     </div>
+    
 </template>
