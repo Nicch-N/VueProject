@@ -3,11 +3,12 @@ import HelloThere from './components/HelloThere.vue'
 import HelloWorld from './components/HelloWorld.vue'
 import NavBar from './components/NavBar.vue'
 import CssTest from './components/CssTest.vue'
-
+import TargetPracticeVue from './components/TargetPractice.vue'
 const routes = {
-  '/':HelloWorld,
-  'asd':HelloThere,
-  'css':CssTest
+  'HelloWorld':HelloWorld,
+  'HelloThere':HelloThere,
+  'css':CssTest,
+  'TargetPractice':TargetPracticeVue
 }
 
 export default {
@@ -51,9 +52,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100%;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 .content{
   padding-top: 1vw;
+  height: 100%;
+  width: 100%;
 }
 </style>
 

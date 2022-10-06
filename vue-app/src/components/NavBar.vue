@@ -18,9 +18,8 @@
     }
 </script>
 <style>
-    .navBar{
-        width: 100vw;        
-        border-bottom: 1px solid rgba(163, 163, 163, 0.178);
+    .navBar{        
+        /*border-bottom: 1px solid rgba(163, 163, 163, 0.178);*/
         display: flex;
         padding: 10px 5px 10px 30px;
         background: linear-gradient(rgb(255, 255, 255), rgb(199, 199, 199));;

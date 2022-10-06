@@ -1,19 +1,8 @@
 <template>
-    <div class="mid">
-        <button class="button" v-for="button in buttonList" :key="button">
-            {{button}}
-        </button>
-        <!-- <TargetComponent/> -->
-    </div>
+    <TargetComponent/>
 </template>
 
 <style>
-    .mid{
-        margin: 0px;
-        width: 100%;
-        height: 100%;
-        background-color: rgb(54, 54, 54);
-    }
     .button{
         margin: 5px;
         padding: 10px;
@@ -30,23 +19,24 @@
         border-radius:5px;
         box-shadow: 0px 2px 1px 1px rgb(94, 94, 94);
         transform: scaleX(1.1);
-        
     }
     
 </style>
 
 <script>
+    import TargetComponent from './Target.vue'
     const buttons = [
         'Hi',
         'There',
         ':)'
     ]
     export default{
-    name: "CssTest",
+    name: "TargetPractice",
     data() {
         return {
             buttonList: buttons
         };
-    }
+    },
+    components: { TargetComponent }
 }
 </script>
