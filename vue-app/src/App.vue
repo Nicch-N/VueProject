@@ -4,11 +4,13 @@ import HelloWorld from './components/HelloWorld.vue'
 import NavBar from './components/NavBar.vue'
 import CssTest from './components/CssTest.vue'
 import TargetPracticeVue from './components/TargetPractice.vue'
+import CardsVue from './components/Cards.vue'
 const routes = {
   'HelloWorld':HelloWorld,
   'HelloThere':HelloThere,
   'css':CssTest,
-  'TargetPractice':TargetPracticeVue
+  'TargetPractice':TargetPracticeVue,
+  'Cards':CardsVue
 }
 
 export default {

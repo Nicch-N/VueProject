@@ -21,8 +21,12 @@
     .navBar{        
         /*border-bottom: 1px solid rgba(163, 163, 163, 0.178);*/
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         padding: 10px 5px 10px 30px;
-        background: linear-gradient(rgb(255, 255, 255), rgb(199, 199, 199));;
+        background: linear-gradient(rgb(255, 255, 255), rgb(199, 199, 199));
+        overflow: auto;
+        gap: 10px;
     }
     *{
         margin: 0px;
@@ -37,11 +41,11 @@
         font-style: normal;
         text-decoration: none;
         transition: .3s;
-        border-radius: 30%
+        border-radius: 20px;
     }
     .navItem:hover{
         background-color: rgb(180, 180, 180);
-        border-radius: 20%;  
+        border-radius: 5px;  
     }
 </style>
 <template>
